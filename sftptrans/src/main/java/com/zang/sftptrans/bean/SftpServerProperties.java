@@ -15,7 +15,7 @@ public class SftpServerProperties {
 
     /**
      * sftp服务器安全验证方式，默认口令认证登录
-     * */
+     */
     private EnumSftpAuthType authType = EnumSftpAuthType.PASSWORD;
 
     /**

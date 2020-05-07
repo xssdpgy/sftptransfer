@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @AllArgsConstructor
-public class SftpAuthKeyUserInfo implements UserInfo{
+public class SftpAuthKeyUserInfo implements UserInfo {
     //SSH private key passphrase
     private String passphrase;
 
@@ -44,6 +44,6 @@ public class SftpAuthKeyUserInfo implements UserInfo{
 
     @Override
     public void showMessage(String s) {
-        log.info("SSH Message is: {}",s);
+        log.info("SSH Message is: {}", s);
     }
 }

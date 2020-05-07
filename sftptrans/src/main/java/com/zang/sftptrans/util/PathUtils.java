@@ -34,12 +34,12 @@ public class PathUtils {
      * @param subPaths
      * @return java.lang.String
      */
-    public static Path toPath (String parentPath, String... subPaths){
-        return Paths.get (parentPath, subPaths);
+    public static Path toPath(String parentPath, String... subPaths) {
+        return Paths.get(parentPath, subPaths);
     }
 
-    public static String appendPath (String parentPath, String... subPaths) {
-        return StringUtils.replace (toPath (parentPath, subPaths).toString (), BACK_SLASH, WIDELY_ACCEPTED_PATH_SEPARATOR);
+    public static String appendPath(String parentPath, String... subPaths) {
+        return StringUtils.replace(toPath(parentPath, subPaths).toString(), BACK_SLASH, WIDELY_ACCEPTED_PATH_SEPARATOR);
     }
 
     /**
@@ -48,12 +48,12 @@ public class PathUtils {
      * @param relativePath
      * @return java.lang.String
      */
-    public static String convertToSubdirectory (String relativePath){
-        relativePath = StringUtils.replace (relativePath, BACK_SLASH, WIDELY_ACCEPTED_PATH_SEPARATOR);
-        if (StringUtils.startsWith (relativePath, MCD)) {
+    public static String convertToSubdirectory(String relativePath) {
+        relativePath = StringUtils.replace(relativePath, BACK_SLASH, WIDELY_ACCEPTED_PATH_SEPARATOR);
+        if (StringUtils.startsWith(relativePath, MCD)) {
             return relativePath;
         }
-        if (StringUtils.startsWith (relativePath, WIDELY_ACCEPTED_PATH_SEPARATOR)) {
+        if (StringUtils.startsWith(relativePath, WIDELY_ACCEPTED_PATH_SEPARATOR)) {
             return MCD + relativePath;
         }
         return MCD + WIDELY_ACCEPTED_PATH_SEPARATOR + relativePath;
@@ -64,26 +64,27 @@ public class PathUtils {
      *
      * @param localFilePath
      */
-    public static void checkWritable (Path localFilePath) {
-        if (Files.exists (localFilePath)) {
-            if (!Files.isWritable (localFilePath)) {
-                throw new IllegalStateException (localFilePath + " is not writable.");
+    public static void checkWritable(Path localFilePath) {
+        if (Files.exists(localFilePath)) {
+            if (!Files.isWritable(localFilePath)) {
+                throw new IllegalStateException(localFilePath + " is not writable.");
             }
         } else {
-            Path parent = localFilePath.getParent ();
+            Path parent = localFilePath.getParent();
             try {
-                Files.createDirectories (parent);
+                Files.createDirectories(parent);
             } catch (IOException e) {
-                throw new IllegalStateException ("Failed to create parent directory " + parent + " .");
+                throw new IllegalStateException("Failed to create parent directory " + parent + " .");
             }
         }
     }
-    public static Path checkWritable (String localFilePath) {
-        if (StringUtils.isBlank (localFilePath)) {
-            throw new IllegalArgumentException ("The param 'targetOutPath' cannot be blank.");
+
+    public static Path checkWritable(String localFilePath) {
+        if (StringUtils.isBlank(localFilePath)) {
+            throw new IllegalArgumentException("The param 'targetOutPath' cannot be blank.");
         }
-        Path target = Paths.get (localFilePath);
-        PathUtils.checkWritable (target);
+        Path target = Paths.get(localFilePath);
+        PathUtils.checkWritable(target);
         return target;
     }
 
@@ -93,8 +94,8 @@ public class PathUtils {
      * @param localFilePath
      * @return boolean
      */
-    public static boolean checkFileExists (Path localFilePath) {
-        return Files.exists (localFilePath, LinkOption.NOFOLLOW_LINKS);
+    public static boolean checkFileExists(Path localFilePath) {
+        return Files.exists(localFilePath, LinkOption.NOFOLLOW_LINKS);
     }
 
     /**
@@ -103,8 +104,8 @@ public class PathUtils {
      * @param localFilePath
      * @return boolean
      */
-    public static boolean checkDirExists (Path localFilePath) {
-        return Files.exists (localFilePath, LinkOption.NOFOLLOW_LINKS) && Files.isDirectory (localFilePath);
+    public static boolean checkDirExists(Path localFilePath) {
+        return Files.exists(localFilePath, LinkOption.NOFOLLOW_LINKS) && Files.isDirectory(localFilePath);
     }
 
     /**
@@ -113,43 +114,42 @@ public class PathUtils {
      * @param localFilePath
      * @return boolean
      */
-    public static boolean checkIsFile (Path localFilePath) {
-        return Files.isReadable (localFilePath) && !Files.isDirectory (localFilePath, LinkOption.NOFOLLOW_LINKS) && !Files.isSymbolicLink (localFilePath);
+    public static boolean checkIsFile(Path localFilePath) {
+        return Files.isReadable(localFilePath) && !Files.isDirectory(localFilePath, LinkOption.NOFOLLOW_LINKS) && !Files.isSymbolicLink(localFilePath);
     }
 
     /**
-     * @desc 检查目标路径是否可读
-     *
      * @param localFilePath
      * @return java.nio.file.Path
+     * @desc 检查目标路径是否可读
      */
-    public static void checkReadable (Path localFilePath) {
-        if (!Files.isReadable (localFilePath)) {
-            throw new IllegalStateException (localFilePath.toString () + " is not readable.");
+    public static void checkReadable(Path localFilePath) {
+        if (!Files.isReadable(localFilePath)) {
+            throw new IllegalStateException(localFilePath.toString() + " is not readable.");
         }
     }
-    public static Path checkReadable (String localFilePath) {
-        if (StringUtils.isBlank (localFilePath)) {
-            throw new IllegalArgumentException ("The param 'localFilePath' cannot be blank.");
+
+    public static Path checkReadable(String localFilePath) {
+        if (StringUtils.isBlank(localFilePath)) {
+            throw new IllegalArgumentException("The param 'localFilePath' cannot be blank.");
         }
-        Path target = Paths.get (localFilePath);
-        if (!Files.isReadable (target)) {
-            throw new IllegalStateException (target.toString () + " is not readable.");
+        Path target = Paths.get(localFilePath);
+        if (!Files.isReadable(target)) {
+            throw new IllegalStateException(target.toString() + " is not readable.");
         }
         return target;
     }
 
     /**
-     * @desc 删除本地文件
-     *
      * @param localFilePath
      * @return boolean
+     * @desc 删除本地文件
      */
-    public static boolean deleteLocalFile (Path localFilePath) {
+    public static boolean deleteLocalFile(Path localFilePath) {
         try {
-            Files.delete (localFilePath);
+            Files.delete(localFilePath);
         } catch (IOException e) {
-            log.error ("删除本地文件操作失败", e);
+            log.error("删除本地文件操作失败", e);
             /*throw new HsjryBizException (e, EnumProLoanError.DELETE_LOCAL_FILE_ERROR.getCode (), EnumProLoanError.DELETE_LOCAL_FILE_ERROR.getMsg ());*/
             return false;
         }
@@ -157,8 +157,7 @@ public class PathUtils {
     }
 
 
-
-    private PathUtils () {
+    private PathUtils() {
         // Utility class
     }
 }

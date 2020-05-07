@@ -13,13 +13,17 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum EnumBusinessError {
-    SFTP_CONNECTION_ERROR("1000","sftp服务连接失败：{}");
+    SFTP_CONNECTION_ERROR("1000", "sftp服务连接失败：{}");
 
 
-    /** 状态码 */
+    /**
+     * 状态码
+     */
     private String code;
 
-    /** 状态描述 */
+    /**
+     * 状态描述
+     */
     private String msg;
 
     /**
@@ -30,8 +34,7 @@ public enum EnumBusinessError {
      **/
     public static EnumBusinessError find(String code) {
         for (EnumBusinessError instance : EnumBusinessError.values()) {
-            if (instance.getCode()
-                    .equals(code)) {
+            if (instance.getCode().equals(code)) {
                 return instance;
             }
         }
