@@ -13,7 +13,14 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum EnumBusinessError {
-    SFTP_CONNECTION_ERROR("1000", "sftp服务连接失败：{}");
+    SFTP_CONNECTION_ERROR("1000", "sftp服务连接失败：{}"),
+    SFTP_OPERATION_FAILURE("1001", "sftp操作失败"),
+    SFTP_UPLOAD_FILE_FAILURE("1002","sftp上传文件失败"),
+    SFTP_DOWNLOAD_FILE_FAILURE ("1003","sftp下载文件失败"),
+    SFTP_DELETE_FILE_FAILURE ("1004","sftp删除文件失败"),
+    SFTP_NOT_INITIALIZED("1005","获取sftp服务会话失败"),
+
+    ;
 
 
     /**
