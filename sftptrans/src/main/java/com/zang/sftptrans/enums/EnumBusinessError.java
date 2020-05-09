@@ -19,6 +19,7 @@ public enum EnumBusinessError {
     SFTP_DOWNLOAD_FILE_FAILURE ("1003","sftp下载文件失败"),
     SFTP_DELETE_FILE_FAILURE ("1004","sftp删除文件失败"),
     SFTP_NOT_INITIALIZED("1005","获取sftp服务会话失败"),
+    SFTP_GET_CLIENT_FAILURE("1006","获取sftp实例失败"),
 
     ;
 
