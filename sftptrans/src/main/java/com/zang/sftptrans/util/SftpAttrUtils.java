@@ -8,8 +8,8 @@ import javax.swing.text.StyledEditorKit;
 /**
  * sftp文件属性工具
  *
- * @author zangjf
- * @version zangjf: SftpAttrUtils.java,v1.0 2020/5/7 23:29 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: SftpAttrUtils.java,v1.0 2020/5/7 23:29 xssdpgy Exp $$
  * @since 1.0
  */
 @Slf4j

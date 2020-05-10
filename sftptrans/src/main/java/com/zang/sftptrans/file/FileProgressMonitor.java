@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * sftp文件上传下载进度监控
  *
- * @author zangjf
- * @version zangjf: FileProgressMonitor.java,v1.0 2020/5/8 17:47 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: FileProgressMonitor.java,v1.0 2020/5/8 17:47 xssdpgy Exp $$
  * @since 1.0
  */
 @Slf4j

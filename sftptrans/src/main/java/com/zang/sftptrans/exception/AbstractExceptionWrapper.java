@@ -6,8 +6,8 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 异常抽象类封装
  *
- * @author zangjf
- * @version zangjf: AbstractExceptionWrapper.java,v1.0 2020/5/5 23:56 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: AbstractExceptionWrapper.java,v1.0 2020/5/5 23:56 xssdpgy Exp $$
  * @since 1.0
  */
 public abstract class AbstractExceptionWrapper extends RuntimeException {

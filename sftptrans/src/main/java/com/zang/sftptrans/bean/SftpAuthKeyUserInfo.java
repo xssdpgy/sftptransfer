@@ -7,8 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * SSH private key passphrase info
  *
- * @author zangjf
- * @version zangjf: SftpAuthKeyUserInfo.java,v1.0 2020/1/7 20:59 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: SftpAuthKeyUserInfo.java,v1.0 2020/1/7 20:59 xssdpgy Exp $$
  * @since 1.0
  */
 @Slf4j

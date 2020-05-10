@@ -3,8 +3,8 @@ package com.zang.sftptrans.exception;
 /**
  * 业务异常类
  *
- * @author zangjf
- * @version zangjf: BusinessException.java,v1.0 2020/5/5 23:56 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: BusinessException.java,v1.0 2020/5/5 23:56 xssdpgy Exp $$
  * @since 1.0
  */
 public class BusinessException extends AbstractExceptionWrapper {

@@ -10,8 +10,8 @@ import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 /**
  * sftp连接缓存池
  *
- * @author zangjf
- * @version zangjf: SftpClientPool.java,v1.0 2020/5/9 0:25 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: SftpClientPool.java,v1.0 2020/5/9 0:25 xssdpgy Exp $$
  * @since 1.0
  */
 @Slf4j

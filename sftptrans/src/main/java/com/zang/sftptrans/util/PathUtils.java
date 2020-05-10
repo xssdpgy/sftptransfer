@@ -12,8 +12,8 @@ import java.nio.file.Paths;
 /**
  * 路径工具类
  *
- * @author zangjf
- * @version zangjf: PathUtils.java,v1.0 2020/5/6 0:33 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: PathUtils.java,v1.0 2020/5/6 0:33 xssdpgy Exp $$
  * @since 1.0
  */
 @Slf4j
@@ -79,6 +79,12 @@ public class PathUtils {
         }
     }
 
+   /**
+     * 检查目标路径是否可写
+     *
+     * @param localFilePath
+     * @return java.nio.file.Path
+     */
     public static Path checkWritable(String localFilePath) {
         if (StringUtils.isBlank(localFilePath)) {
             throw new IllegalArgumentException("The param 'targetOutPath' cannot be blank.");

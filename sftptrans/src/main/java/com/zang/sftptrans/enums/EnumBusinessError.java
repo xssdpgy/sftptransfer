@@ -6,8 +6,8 @@ import lombok.Getter;
 /**
  * 业务异常类型枚举
  *
- * @author zangjf
- * @version zangjf: EnumBusinessError.java,v1.0 2020/5/6 0:28 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: EnumBusinessError.java,v1.0 2020/5/6 0:28 xssdpgy Exp $$
  * @since 1.0
  */
 @Getter
@@ -15,11 +15,11 @@ import lombok.Getter;
 public enum EnumBusinessError {
     SFTP_CONNECTION_ERROR("1000", "sftp服务连接失败：{}"),
     SFTP_OPERATION_FAILURE("1001", "sftp操作失败"),
-    SFTP_UPLOAD_FILE_FAILURE("1002","sftp上传文件失败"),
-    SFTP_DOWNLOAD_FILE_FAILURE ("1003","sftp下载文件失败"),
-    SFTP_DELETE_FILE_FAILURE ("1004","sftp删除文件失败"),
-    SFTP_NOT_INITIALIZED("1005","获取sftp服务会话失败"),
-    SFTP_GET_CLIENT_FAILURE("1006","获取sftp实例失败"),
+    SFTP_UPLOAD_FILE_FAILURE("1002", "sftp上传文件失败"),
+    SFTP_DOWNLOAD_FILE_FAILURE("1003", "sftp下载文件失败"),
+    SFTP_DELETE_FILE_FAILURE("1004", "sftp删除文件失败"),
+    SFTP_NOT_INITIALIZED("1005", "获取sftp服务会话失败"),
+    SFTP_GET_CLIENT_FAILURE("1006", "获取sftp实例失败"),
 
     ;
 

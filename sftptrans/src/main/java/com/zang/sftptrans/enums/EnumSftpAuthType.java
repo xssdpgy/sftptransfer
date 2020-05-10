@@ -6,8 +6,8 @@ import lombok.Getter;
 /**
  * sftp服务器安全验证方式
  *
- * @author zangjf
- * @version zangjf: EnumSftpAuthType.java,v1.0 2020/5/6 0:13 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: EnumSftpAuthType.java,v1.0 2020/5/6 0:13 xssdpgy Exp $$
  * @since 1.0
  */
 @Getter

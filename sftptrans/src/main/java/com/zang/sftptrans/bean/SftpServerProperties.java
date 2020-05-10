@@ -6,8 +6,8 @@ import lombok.Data;
 /**
  * Sftp服务端配置类
  *
- * @author zangjf
- * @version zangjf: SftpServerProperties.java,v1.0 2020/5/6 0:05 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: SftpServerProperties.java,v1.0 2020/5/6 0:05 xssdpgy Exp $$
  * @since 1.0
  */
 @Data

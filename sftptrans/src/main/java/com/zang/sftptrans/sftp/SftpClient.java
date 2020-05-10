@@ -31,8 +31,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * sftp客户端
  *
- * @author zangjf
- * @version zangjf: SftpClient.java,v1.0 2020/5/6 0:20 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: SftpClient.java,v1.0 2020/5/6 0:20 xssdpgy Exp $$
  * @since 1.0
  */
 @Slf4j
@@ -117,8 +117,6 @@ public class SftpClient {
 
         }
     }
-
-    //TODO other methods
 
     /**
      * 将文件流上传到sftp相对目录下，并返回全路径

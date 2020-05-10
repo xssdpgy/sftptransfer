@@ -9,12 +9,12 @@ import org.apache.commons.pool2.impl.DefaultPooledObject;
 /**
  * sftp客户端对象工厂
  *
- * @author zangjf
- * @version zangjf: SftpClientFactory.java,v1.0 2020/5/9 23:25 zangjf Exp $$
+ * @author xssdpgy
+ * @version xssdpgy: SftpClientFactory.java,v1.0 2020/5/9 23:25 xssdpgy Exp $$
  * @since 1.0
  */
 @Slf4j
-public class SftpClientFactory extends BasePooledObjectFactory<SftpClient>{
+public class SftpClientFactory extends BasePooledObjectFactory<SftpClient> {
 
     private SftpServerProperties server;
 
@@ -23,7 +23,7 @@ public class SftpClientFactory extends BasePooledObjectFactory<SftpClient>{
     }
 
     @Override
-    public SftpClient create(){
+    public SftpClient create() {
         return new SftpClient(server);
     }
 
